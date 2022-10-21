@@ -1,0 +1,45 @@
+#include<iostream>
+#define n 100
+using namespace std;
+int main(){
+	int s[n],top=-1,item,i,option,temp;
+	
+while(1){
+	cout<<"1.insert element\n";
+	cout<<"2.delete element\n";
+	cout<<"3.display element\n";
+	cout<<"4. exit\n";
+	cout<<"enter the option\n";
+	cin>>option;
+	switch(option){
+	case 1: if(top==n-1)
+		{cout<<"stack is overflow\n";
+		}
+		else
+		{top++;
+		cout<<"enter element\n";
+		cin>>item;
+		s[top]=item;
+		}
+		break;
+	case 2: if(top==-1)
+		{cout<<"stack is empty\n";
+		}
+		else
+		{temp=s[top];
+		top--;
+		cout<<temp;
+		}
+		break;
+	case 3: for(i=top;i>=0;i--){
+		cout<<s[i]<<"\n";
+		}
+		break;
+	case 4:
+			{
+			exit (0);}
+		break;
+	
+	default: cout<<"you have end\n";
+	}}
+}
