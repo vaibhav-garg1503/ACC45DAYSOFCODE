@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+class time
+{
+	int hours,minutes,seconds;
+	public:
+		time()
+		{
+		hours=minutes=seconds=0;	
+		}
+		time(int hrs,int mins,int secs)
+		{
+			hours= hrs;
+			minutes = mins;
+			seconds = secs;
+		}
+		void get()
+		{
+			cout<<"Enter hours"<<endl;
+			cin>>hours;
+			cout<<"Enter minutes"<<endl;
+			cin>>minutes; 
+			cout<<"Enter seconds"<<endl;
+			cin>>seconds;
+		}
+		void disp()
+		{
+			cout<<"hours:"<<hours<<endl<<"minutes:"<<minutes<<endl<<"seconds:"<<seconds<<endl;
+		}
+		time operator-(time ob)
+		{
+			time temp;
+			temp.hours = hours-ob.hours;
+			temp.minutes = minutes-ob.minutes;
+			temp.seconds = seconds-ob.seconds;
+			return temp;
+		}
+};
+int main()
+{
+time ob1,ob2(2,30,15),ob3;
+ob1.get();
+ob3= ob1-ob2;
+ob3.disp();
+
+}
