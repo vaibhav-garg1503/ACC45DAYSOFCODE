@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+   int arr[100],n,i,high;
+   cout << "Enter the size of an array( Max 100) \n";
+    cin >> n;
+    
+    cout << "Enter array elements \n";
+    
+    high = arr[0];
+    
+    //Take input values
+    
+    for(i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+     for(i = 0; i < n; i++) {
+        
+        //If any value is greater than highest
+        
+    
+    if(	n%i==arr[i])
+    {
+    
+	}
+}
+cout<<high;
+return 0;
+}
