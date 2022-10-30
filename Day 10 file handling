@@ -1,0 +1,21 @@
+#include<iostream>     // step1 
+#include<fstream>      // fstream for file handling
+using namespace std;
+main ()
+{
+int roll,marks;
+char name [20];
+ofstream out("arin.txt");    // step 2  open file R/W
+cout<<"Enter roll no";
+cin>>roll;
+cout<<"Enter name";
+cin>>name;
+cout<<"Enter marks";             // Step3 W/R on file   
+cin>>marks;
+out<<roll<<"  "<<name<<"  "<<marks;  // out : write on
+out.close();                     // step 4 close file
+ifstream in("arin.txt");        // read from file 
+in>>roll>>name>>marks;
+cout<<"Roll no :"<<roll<<"Name"<<name<<"Marks"<<marks<<endl; // output on screen
+in.close();
+}
