@@ -1,0 +1,26 @@
+#includeciostream>
+using namespace std;
+struct node{
+int data;
+struct node *next;
+ );
+struct node "head= NULL;
+void insert(int x){
+struct node "newnode (struct node")malloc(sizeof(struct node));
+newmode->data=x; nesmode->next = head;
+head-newnode;
+void display(){
+struct node temp;
+temp head;
+while(temp!= NULL){
+cout<<temp->data;
+temp-temp->next;
+}
+}
+int main()
+{
+insert(2);
+insert(5);
+insert(7);
+display();
+return 0;}
