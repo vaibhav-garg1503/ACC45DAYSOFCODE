@@ -1,0 +1,113 @@
+#include<iostream>
+using namespace std;
+ class A
+{
+    public:
+    int x;
+
+  public:
+    A() 
+    {
+      x = 0; 
+    }
+    A(int x1) 
+    {
+         x = x1; 
+    }
+    void get()
+    {
+        cout << "Enter any value of x: ";
+        cin >> x;
+    }
+    void disp()
+    {
+        cout << "X = " << x << endl;
+    }
+};
+class B :public A     //Hybrid Inheritence
+{   
+   int y;
+
+  public:
+    B() 
+    {
+       y = 0; 
+    }
+    B(int x1, int y1) : A(x1) 
+    {
+         y = y1; 
+    }
+
+    void get()
+    {
+        A::get();
+        cout << "Enter any value of y: ";
+        cin >> y;
+    }
+    void disp()
+    {
+        A::disp();
+        cout << "Y = " << y << endl;
+    }
+};
+class C :public A
+ {
+     
+     int z;
+
+  public:
+    C() 
+    {
+        z = 0;
+    }
+    C(int x1, int z1) : A(x1) 
+    {
+         z = z1; 
+    }
+
+    void get()
+    {
+        A::get();
+        cout << "Enter any value of z: ";
+        cin >> z;
+    }
+    void disp()
+    {
+        A::disp();
+        cout << "Z = " << z << endl;
+    }
+ };
+ class D : public B, public C
+ {
+     public:
+     int w;
+     public:
+     D()
+     {
+         w = 0;
+     }
+     D(int x1,int y1,int z1,int w1):B(x1,y1),C(x1,z1)
+     {
+         w = w1;
+     }
+     void get()
+     {
+         B::get();
+         C::get();
+        cout<<"Enter the value of w: ";
+        cin>>w;
+     }
+     void disp()
+     {
+         B::disp();
+         C::disp();
+         cout<<"W = "<<w;
+     }
+ };
+int main()
+{
+ D ob(2,4,7,8);
+ //ob.get();
+ ob.disp();
+return 0;
+}
