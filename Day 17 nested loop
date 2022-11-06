@@ -1,0 +1,71 @@
+//          ************ NESTED CLASS ***********
+
+#include<iostream>
+using namespace std;
+static int x,y;
+class sm{
+	public:
+//	 int x,y;
+	 int sum;
+	public:
+		void add(){
+			sum=(x+y);
+			cout<<"addition: "<<sum<<endl;
+}
+
+	class sb{
+		public:
+		int sub;
+		
+		public:
+		void subs(){
+			sub=(x-y);
+			cout<<"subtraction: "<<sub<<endl;
+		}
+
+		class div{
+			int divi;
+			public:
+			void divide(){
+			//	x=p;
+			//	y=q;
+				divi=x/y;
+				cout<<"divide "<<divi<<endl;
+			}
+
+			class mul{
+				public:
+				int multi;
+				public:
+				void get(){
+					cout<<"Enter the value of X and Y"<<endl;
+					cin>>x>>y;
+				}
+				void mult(int b,int a){
+				multi=x*y;
+				cout<<"multiplication: "<<multi<<endl;
+			}
+};
+};
+};			
+};
+int main()
+{
+sm::sb::div::mul ob1;
+ob1.get();
+ob1.mult(2,3);
+
+
+}
+/*
+class enclosing{
+	private:
+		int x;
+		class nested{
+			int y;
+			void nestedfun(enclosing *e)
+			{
+				cout<<e->x;
+			}
+		};
+};
