@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int T;
+    cin>>T;
+    while(T--)
+    {
+        int n,sc,sm,sr,ti;
+        cin>>n;
+        ti=50*n;
+        sc=ti*0.2;
+        sm=ti*0.2;
+        sr=ti*0.3;
+        cout<<endl<<ti-(sc+sm+sr);
+    }
+    return 0;
+}
