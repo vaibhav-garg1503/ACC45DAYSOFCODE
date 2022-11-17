@@ -1,0 +1,19 @@
+declare
+	no bank.acno%type; : = &no;
+	ta bank.transaction%type := & ta;
+	ba bank.transaction%type := & bal;
+	begin
+	select transaction, balance into ta, bal from bank
+	where transact = &ta;
+	if transaction = 'd' then
+	update bank set balance = balance + bal
+	where transaction = ta;
+	elseif
+	transaction = 'w' and if balance>500 then
+	update bank set balance = balace + bal
+	else
+	insufficient acno
+	endif
+	endif
+	end loop
+	end;
