@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+class base
+{
+    public:
+    virtual void show()
+    {
+        cout<<"the base show"<<endl;
+    }
+    virtual void disp() = 0;
+};
+class derived : public base
+{
+    public:
+    void show()
+{
+    base :: show();
+    cout<<"The derived show"<<endl;
+}
+void disp()
+    {
+        cout<<"In display of derived"<<endl;
+    }
+};
+class most: virtual public derived
+{
+    public:
+    void show()
+    {
+        cout<<"In most derived show"<<endl;
+    }
+};
+int main(){
+    base *b;
+    b = new derived;
+    b->show();
+    b->disp();
+    b = new most ;
+    b-> show();
+    return 0;
+}
