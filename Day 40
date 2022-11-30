@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class A{
+    int i;
+    static int count;
+    public:
+    void get()
+    {
+        cout<<"Enter the value of i: ";
+        cin>>i;
+        count++;
+    }
+    void disp()
+    {
+        cout<<i<<endl;
+        cout<<”count: ”<<count<<endl;
+    }
+};
+int A::count =0;
+int main()
+{
+    A ob1,ob2,ob3;
+    ob1.get();
+    ob1.disp();
+    ob2.get();
+    ob2.disp();
+    ob3.get();
+    ob3.disp();
+    return 0;
+}
