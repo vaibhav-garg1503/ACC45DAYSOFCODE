@@ -1,0 +1,35 @@
+#include<iostream>
+
+using namespace std;
+class D
+{
+	int feet ,inches;
+	public:
+		void get()
+		{
+			cout<<"Enter feet"<<endl;
+			cin>>feet;
+			cout<<"Enter inches"<<endl;
+			cin>>inches; 
+		}
+		void disp()
+		{ 
+			cout<<"feet:"<<feet<<endl<<"inches:"<<inches<<endl;
+		}
+		D operator+(D ob)
+		{
+			D temp;
+			temp.feet=feet+ob.feet;
+			temp.inches=inches+ob.inches;
+			return temp;
+		}
+};
+int main()
+{
+D ob1,ob2,ob3;
+ob1.get();
+ob2.get();
+ob3=ob1+ob2;
+ob3.disp();
+return 0;
+}
