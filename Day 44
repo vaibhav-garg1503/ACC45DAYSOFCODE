@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+class A
+{ int x,y;
+friend ostream & operator<<(ostream &,A);
+friend istream & operator>>(istream &,A&);
+};
+ostream & operator<<(ostream & out,A ob)
+{
+out<<"value of x:"<<ob.x<<endl;
+out<<"value of y:"<<ob.y<<endl;
+return out;
+} 
+istream & operator>>(istream&in,A&ob){
+cout<<"enter x:";
+in>>ob.x;
+cout<<"enter y:";
+in>>ob.y;
+return in;
+}
+main(){
+A ob1,ob2;
+cin>>ob1>>ob2;
+cout<<ob1<<ob2;
+}
